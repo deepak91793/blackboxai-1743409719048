@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone - Premium Free & Ad-Free</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        .content-card {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .content-card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .content-card .absolute {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-4 z-10 relative">
+        <div class="text-red-600 font-bold text-4xl">NETFLIX</div>
+        <div class="flex space-x-4">
+            <button class="px-4 py-2 bg-red-600 rounded">Sign In</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba')] bg-cover bg-center -z-10"></div>
+        <div class="container mx-auto px-6 z-10">
+            <h1 class="text-5xl font-bold mb-4">Unlimited movies, TV shows, and more.</h1>
+            <p class="text-2xl mb-8">Watch anywhere. Cancel anytime.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="bg-red-600 hover:bg-red-700 px-6 py-3 rounded text-xl font-semibold flex items-center gap-2">
+                    <i class="fas fa-play"></i> Watch Now
+                </button>
+                <button class="bg-gray-600 hover:bg-gray-700 px-6 py-3 rounded text-xl font-semibold flex items-center gap-2">
+                    <i class="fas fa-info-circle"></i> More Info
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-6">Popular on Netflix</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4" id="content-grid">
+            <!-- Content will be loaded via JavaScript -->
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
